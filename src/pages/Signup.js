@@ -17,7 +17,10 @@ const Signup = () => {
       headers:{'content-type':'application/json'},
       body:JSON.stringify(data),
     });
+<<<<<<< HEAD
   alert('Registeration Successfull..');
+=======
+>>>>>>> 1323dd27ad9a17318f5f7d65f373cd3add7e91cd
   navigate('/login');
    
  }
