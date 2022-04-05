@@ -18,6 +18,8 @@ const Home = () => {
                         <div className="col-md-12">
                         <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ipsa dicta necessitatibus doloremque temporibus quas fugit tempora voluptatum excepturi molestiae.</h5>
                         <button className='btn btn-info'>Explore Now</button>
+                        <h2>arbaaz unique</h2>
+                        <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.</p>
                         </div>
                     </div>
                 </div>
