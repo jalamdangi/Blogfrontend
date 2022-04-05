@@ -1,0 +1,14 @@
+/* index page css */
+.wrapper{
+    background-color: whitesmoke;
+    max-width: 90%;
+    /* border: 2px solid black; */
+}
+.wrapper img{
+    width: 100%; height: auto;
+}
+.about-section{display: flex; justify-content: center; align-items: center;}
+
+/* signup page css */
+.signup-img img{width: 100%; height: auto;}
+ 
