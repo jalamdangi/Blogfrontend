@@ -14,12 +14,8 @@ const Signin = () => {
       body:JSON.stringify(data),
     });
  const res=await response.json();
-<<<<<<< HEAD
  localStorage.setItem('token',res.token);
  navigate('/Userprofile');
-=======
- localStorage.setItem('token',res.token)
->>>>>>> 1323dd27ad9a17318f5f7d65f373cd3add7e91cd
   
  }
   return (
