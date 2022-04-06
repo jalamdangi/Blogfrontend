@@ -15,7 +15,7 @@ const Signin = () => {
     });
  const res=await response.json();
  localStorage.setItem('token',res.token);
- navigate('/Userprofile');
+
   
  }
   return (

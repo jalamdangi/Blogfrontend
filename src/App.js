@@ -27,6 +27,7 @@ function App() {
           <Route exact path='/signup' element={<Signup/>}/>
           <Route exact path='/check' element={<Check/>}/>
           <Route exact path='/fetchbytags/:tag' element={<Fetchbytags/>}/>
+          <Route exact path='/fetchbytags/:tag/singleblog/:id' element={<Singleblog/>}/>
           <Route path="*" element={<Errorpage />} />
         </Routes>
       </BrowserRouter>
