@@ -15,11 +15,7 @@ const Singeblog = () => {
         })
 
     },[])
-    //  console.log(`http://localhost:5000/getblogs/${id}`);
-    //  console.log(data)
-
-
-  return (
+    return (
     <div>
         <div className="container">
             <div className="row">
