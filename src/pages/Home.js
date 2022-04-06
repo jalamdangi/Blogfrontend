@@ -1,6 +1,11 @@
 import React from 'react'
 import './pages.css'
-import Card from '../components/card'
+import Card from '../components/Card'
+import Recentblog from '../components/Recentblog'
+import frontendimage from '../images/frontend.jpg'; 
+import backendimage from '../images/backend.png'; 
+import databaseimage from '../images/database.png'; 
+import frameworkimage from '../images/framework.png'; 
 
 const Home = () => {
   return (
@@ -18,10 +23,6 @@ const Home = () => {
                         <div className="col-md-12">
                         <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ipsa dicta necessitatibus doloremque temporibus quas fugit tempora voluptatum excepturi molestiae.</h5>
                         <button className='btn btn-info'>Explore Now</button>
-                        <h2>arbaaz unique</h2>
-                        <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.</p>
-                        <h2>jalam dangi</h2>
-                        <p>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
                         </div>
                     </div>
                 </div>
@@ -31,26 +32,17 @@ const Home = () => {
                     <h2>Recent Posts</h2>
                 </div>
             </div>
-             <div className="row border">
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-             </div>
+                <Recentblog></Recentblog>
             <div className="row mt-4 border">
                 <div className="col-md-12 text-center p-3">
                     <h2>Category</h2>
                 </div>
             </div>
             <div className="row border">
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
+                <Card category="frontend"  image={frontendimage}/>
+                <Card category="backend"   image={backendimage}/>
+                <Card category="database"  image={databaseimage}/>
+                <Card category="framework" image={frameworkimage}/>
             </div>
             <div className="row mt-4 border p-2">
                 <div className="col-md-12 text-center">
@@ -59,25 +51,25 @@ const Home = () => {
             </div>
             <div className="row border">
                 <div className="col-md-12">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active p-5">
+                <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+                <div className="carousel-inner">
+                    <div className="carousel-item active p-5">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium omnis, dolores harum mollitia animi magnam maiores? Asperiores doloremque commodi ex!</p>
                     </div>
-                    <div class="carousel-item p-5">
+                    <div className="carousel-item p-5">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident excepturi veritatis omnis, quibusdam quos rerum. Totam perferendis et doloremque alias.</p>
                     </div>
-                    <div class="carousel-item p-5">
+                    <div className="carousel-item p-5">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat hic aspernatur non sit quod dicta similique quam quos quas magni.</p>
                     </div>
                 </div>
-                <a class="carousel-control-prev bg-info" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
+                <a className="carousel-control-prev bg-info" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next bg-info" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
+                <a className="carousel-control-next bg-info" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Next</span>
                 </a>
             </div>
                 </div>

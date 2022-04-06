@@ -11,7 +11,8 @@ import Check from './pages/Check';
 import Errorpage from './pages/Errorpage';
 import Fetchbytags from './pages/Fetchbytags';
 import Userprofile from './pages/Userprofile';
-// import Singeblog from './pages/Singleblog';
+import Recentblog from './components/Recentblog';
+import BlogCategory from './pages/BlogCategory';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
           <Route exact path='/check' element={<Check/>}/>
           <Route exact path='/fetchbytags/:tag' element={<Fetchbytags/>}/>
           <Route exact path='/fetchbytags/:tag/singleblog/:id' element={<Singleblog/>}/>
+          <Route exact path='/recentblog' element={<Recentblog/>}/>
+          <Route exact path='/singleblog/:id' element={<Singleblog/>}/>
+          <Route exact path='/BlogCategory/:tag' element={<BlogCategory/>}/>
           <Route path="*" element={<Errorpage />} />
         </Routes>
       </BrowserRouter>
