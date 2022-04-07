@@ -26,7 +26,7 @@ const Blog = () => {
             return(
                   <>
                   <div className="card col-md-6">
-                    <img className="card-img-top" src={item.image} alt="Card image cap" style={{height:200,width:200}}/>
+                    <img className="card-img-top" src={item.image} alt="Card image cap" style={{height:300}}/>
                     <div className="card-body">
                     <h5 className="card-title">{item.title}</h5>
                     <h6>Category : {item.category}</h6>

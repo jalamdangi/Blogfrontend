@@ -19,7 +19,7 @@ const Recentpostsidebar = () => {
                     <div class="card-body">
                         <h5 class="card-title">{post.title}</h5>
                         <p class="card-text text-truncate">{post.description}</p>
-                        <NavLink to={`/singleblog/${post._id}`} className="btn btn-success">Read More</NavLink>
+                        <NavLink to={`/singleblog/${post._id}/${post.category}`} className="btn btn-success">Read More</NavLink>
                     </div>
                 </div>
                 )

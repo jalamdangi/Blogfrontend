@@ -13,6 +13,7 @@ import Fetchbytags from './pages/Fetchbytags';
 import Userprofile from './pages/Userprofile';
 import Recentblog from './components/Recentblog';
 import BlogCategory from './pages/BlogCategory';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -30,12 +31,14 @@ function App() {
           <Route exact path='/fetchbytags/:tag' element={<Fetchbytags/>}/>
           <Route exact path='/fetchbytags/:tag/singleblog/:id' element={<Singleblog/>}/>
           <Route exact path='/recentblog' element={<Recentblog/>}/>
-          <Route exact path='/singleblog/:id/:category' element={<Singleblog/>}/>
           <Route exact path='/singleblog/:id' element={<Singleblog/>}/>
+          <Route exact path='/singleblog/:id/:category' element={<Singleblog/>}/>
           <Route exact path='blog/singleblog/:id/:category' element={<Singleblog/>}/>
-          <Route exact path='/BlogCategory/:category' element={<BlogCategory/>}/>
+          <Route exact path='/blogcategory/:category' element={<BlogCategory/>}/>
+          <Route exact path='/blogcategory/:category/singleblog/:id' element={<Singleblog/>}/>
           <Route path="*" element={<Errorpage />} />
         </Routes>
+        <Footer></Footer>
       </BrowserRouter>
     </div>
   );

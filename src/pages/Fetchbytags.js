@@ -1,6 +1,7 @@
 import React, { useEffect , useState } from 'react';
 import { NavLink , useParams } from 'react-router-dom';
 import './pages.css';
+import Recentpostsidebar from '../components/Recentpostsidebar'
 
 const Fetchbytags = () => {
     const {tag} = useParams();
@@ -48,10 +49,7 @@ const Fetchbytags = () => {
               <div className="row border">
               <h3 className='pl-3'>Recent Posts</h3>
               <div className="col-md-12">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates vel quam repellendus commodi laborum beatae, odit ducimus eaque. Velit in id porro ducimus maiores sapiente aperiam dolorum, molestias iure consequatur veniam. Impedit iure blanditiis minima sequi eos eius explicabo harum!</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates vel quam repellendus commodi laborum beatae, odit ducimus eaque. Velit in id porro ducimus maiores sapiente aperiam dolorum, molestias iure consequatur veniam. Impedit iure blanditiis minima sequi eos eius explicabo harum!</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates vel quam repellendus commodi laborum beatae, odit ducimus eaque. Velit in id porro ducimus maiores sapiente aperiam dolorum, molestias iure consequatur veniam. Impedit iure blanditiis minima sequi eos eius explicabo harum!</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates vel quam repellendus commodi laborum beatae, odit ducimus eaque. Velit in id porro ducimus maiores sapiente aperiam dolorum, molestias iure consequatur veniam. Impedit iure blanditiis minima sequi eos eius explicabo harum!</p>
+                <Recentpostsidebar></Recentpostsidebar>
               </div>
             </div>
             </div>
