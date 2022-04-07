@@ -3,10 +3,11 @@ import { NavLink, useParams } from 'react-router-dom';
 import './pages.css';
 
 const BlogCategory = () => {
-    const {tag} = useParams();
+    const {category} = useParams();
+    console.log(category);
     const [data, setData] = useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5000/fetchbytags/${tag}`).then((result)=>{
+        fetch(`http://localhost:5000/fetchbycategory/${category}`).then((result)=>{
             result.json().then((response)=>{
                 setData(response)
             })

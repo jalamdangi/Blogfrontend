@@ -2,10 +2,12 @@ import React from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import { useState , useEffect } from 'react';
 import './pages.css';
+import Relatedpost from '../components/Relatedpostsidebar';
 
 
 const Singeblog = () => {
-    const {id} = useParams();
+    const {id,category} = useParams();
+    console.log(category);
     const [data, setData] = useState([])
     useEffect(()=>{
         fetch(`http://localhost:5000/getblogs/${id}`).then((result)=>{
@@ -14,7 +16,7 @@ const Singeblog = () => {
             })
         })
 
-    },[])
+    },[id])
     return (
     <div>
         <div className="container">
@@ -28,7 +30,7 @@ const Singeblog = () => {
                         <p>{item.description}</p>
                         <p>{item.tags.map((tag)=>{return(
                         <>
-                            <NavLink to={`/fetchbytags/${tag}`} style={{margin:"10px"}}>{tag}</NavLink>
+                            <NavLink to={`/fetchbytags/${tag}`} className="blog-tags">{tag}</NavLink>
                         </>
                         )})}</p>
                         </>
@@ -42,9 +44,11 @@ const Singeblog = () => {
                 </div>
                 <div className="col-md-4 border">
                     <h2>Related Posts</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae tempore, repellat animi vero distinctio eaque molestias quaerat voluptatum rem beatae cupiditate delectus quis dolorum excepturi mollitia quo ab officia fuga repellendus nihil iusto consequatur quod libero! Alias eos est iste nobis hic facilis amet quia laudantium pariatur obcaecati, qui iure. </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae tempore, repellat animi vero distinctio eaque molestias quaerat voluptatum rem beatae cupiditate delectus quis dolorum excepturi mollitia quo ab officia fuga repellendus nihil iusto consequatur quod libero! Alias eos est iste nobis hic facilis amet quia laudantium pariatur obcaecati, qui iure. </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae tempore, repellat animi vero distinctio eaque molestias quaerat voluptatum rem beatae cupiditate delectus quis dolorum excepturi mollitia quo ab officia fuga repellendus nihil iusto consequatur quod libero! Alias eos est iste nobis hic facilis amet quia laudantium pariatur obcaecati, qui iure. </p>
+                    <div className="row">
+                        <div className="col-md-12">
+                            <Relatedpost category={category} ></Relatedpost>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

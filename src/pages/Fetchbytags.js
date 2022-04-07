@@ -32,7 +32,7 @@ const Fetchbytags = () => {
                     <p className="card-text text-truncate">{item.description}</p>
                     <p>{item.tags.map((tag)=>{return(
                       <>
-                      <NavLink to={`/fetchbytags/${tag}`} style={{margin:"10px"}}>{tag}</NavLink>
+                      <NavLink to={`/fetchbytags/${tag}`} className="blog-tags">{tag}</NavLink>
                       </>
                     )})}</p>
                     <NavLink to={`singleblog/${item._id}`} className="btn btn-primary">Read More</NavLink>

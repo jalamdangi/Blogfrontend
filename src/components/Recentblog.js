@@ -13,7 +13,7 @@ const Recentblog = () => {
     },[])
   return (
     <>
-      <div className="row">
+      <div className="row border">
             {
             data.slice(0,8).map((post)=>{
             return(
@@ -23,7 +23,7 @@ const Recentblog = () => {
                     <div className="card-body">
                     <h5 className="card-title">{post.title}</h5>
                     <p className="card-text text-truncate">{post.description}</p>
-                    <NavLink to={`singleblog/${post._id}`} className="btn btn-info">View More</NavLink>
+                    <NavLink to={`singleblog/${post._id}/${post.category}`} className="btn btn-info">View More</NavLink>
                     </div>
                 </div>
             </div>

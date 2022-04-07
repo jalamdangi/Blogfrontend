@@ -79,7 +79,7 @@ const Home = () => {
                     <h2>Footer Section</h2>
                 </div>
             </div>
-            <div className="row border border">
+            <div className="row border border bg-info p-3">
                     <div className="col-md-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, culpa vel, amet quod iste numquam deserunt eum ab porro dicta explicabo odio neque! Eligendi quisquam quod at iste, unde quidem numquam? Nisi soluta eos recusandae ipsam voluptatem repellat tempora necessitatibus. Reiciendis modi nostrum non, unde eius eveniet eum necessitatibus esse.Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, dolorem voluptatem rem quod aliquid totam corporis earum in, ipsam beatae ad temporibus iste repudiandae nihil provident quam officia pariatur at ipsum laboriosam accusantium! Officia aliquid minus quia ipsa dignissimos doloremque dolorum fugit explicabo sit nesciunt nostrum expedita nisi iure, et fuga aut molestias perspiciatis at eaque ab, quasi vitae tempore ducimus delectus? Eligendi, voluptate deserunt! Tempore temporibus dolores adipisci expedita ab ducimus consequuntur animi, repellendus dolorum minus, magnam sequi a facere, quasi voluptas odit eaque eos? Sapiente, quisquam odio aut modi in doloremque sit laboriosam eius reiciendis voluptatem, laudantium deserunt?</div>
             </div>
         </div>

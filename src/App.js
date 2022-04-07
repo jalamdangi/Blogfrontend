@@ -30,8 +30,10 @@ function App() {
           <Route exact path='/fetchbytags/:tag' element={<Fetchbytags/>}/>
           <Route exact path='/fetchbytags/:tag/singleblog/:id' element={<Singleblog/>}/>
           <Route exact path='/recentblog' element={<Recentblog/>}/>
+          <Route exact path='/singleblog/:id/:category' element={<Singleblog/>}/>
           <Route exact path='/singleblog/:id' element={<Singleblog/>}/>
-          <Route exact path='/BlogCategory/:tag' element={<BlogCategory/>}/>
+          <Route exact path='blog/singleblog/:id/:category' element={<Singleblog/>}/>
+          <Route exact path='/BlogCategory/:category' element={<BlogCategory/>}/>
           <Route path="*" element={<Errorpage />} />
         </Routes>
       </BrowserRouter>
