@@ -14,8 +14,12 @@ const Signin = () => {
       body:JSON.stringify(data),
     });
  const res=await response.json();
- localStorage.setItem('token',res.token);
- navigate('/Userprofile');
+ if(res.message==="login with correct credential"){alert('login with correct credential')}
+ else{
+
+   localStorage.setItem('token',res.token);
+   navigate('/Userprofile');
+ }
   
  }
   return (

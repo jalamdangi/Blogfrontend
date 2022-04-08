@@ -36,6 +36,7 @@ function App() {
           <Route exact path='blog/singleblog/:id/:category' element={<Singleblog/>}/>
           <Route exact path='/blogcategory/:category' element={<BlogCategory/>}/>
           <Route exact path='/blogcategory/:category/singleblog/:id' element={<Singleblog/>}/>
+          <Route exact path='/Userprofile' element={<Userprofile/>}/>
           <Route path="*" element={<Errorpage />} />
         </Routes>
         <Footer></Footer>
