@@ -9,7 +9,9 @@ const Userprofile = () => {
   const [tag,setTag]=useState();
   const [image,setImage]=useState();
   const [fTag,setFtag]=useState([]);
-  const [mytag,setMytag]=useState([]);
+  const [mytags,setMytag]=useState([]);
+  
+ 
   const token=localStorage.getItem('token');
   const getUser= async ()=>{
     const res= await fetch('http://localhost:5000/getuser',{
@@ -20,12 +22,24 @@ const Userprofile = () => {
     console.log(user)
   }
 
-
 const myTag=()=>{
-  setFtag(fTag=>[...fTag,tag]);
+  const newTag= mytags.map((item)=>item.tag)
  
+    setFtag(fTag=>[...fTag,newTag[0]]);
+  
   console.log(fTag)
 
+}
+const fetchTag = async (e)=>{
+  e.preventDefault();
+  const searchTag={tag:tag}
+  const response= await fetch('http://localhost:5000/fetchtag',{
+    method:'POST',
+    headers:{'content-type':'application/json'},
+    body:JSON.stringify(searchTag)
+  });
+  setMytag(await response.json())
+  
 }
 const postBlog =async(e)=>{
   e.preventDefault();
@@ -39,7 +53,7 @@ console.log(await response.json());
 alert('Your blog is posted')
 }
   useEffect(()=>{getUser() },[token])
-
+  
   return (
     <>
         <div>
@@ -51,7 +65,8 @@ alert('Your blog is posted')
                <input type='text' value={title} onChange={(e)=>setTitle(e.target.value)} placeholder="title" /><br/>
                <input type='text' value={description} onChange={(e)=>setDescription(e.target.value)}  placeholder="description" /><br/>
                <input type='text' value={tag} onChange={(e)=>setTag(e.target.value)}  placeholder="add tags" /><br/>
-               <input type='button' value='add' onClick={myTag} />
+               <button onClick={fetchTag}>Search tag</button>
+              <div>{<div>{mytags.map((item)=>{return <><div>{item.tag}<div className='tagbtn' onClick={myTag}>add</div> </div><br></br></>})}</div>}</div>
                  <div>{fTag.map((item)=>{return <>{item}</>})}</div>
                <input type='text' value={image} onChange={(e)=>setImage(e.target.value)}  /><br/>
                <button onClick={postBlog}>Post Blog</button>

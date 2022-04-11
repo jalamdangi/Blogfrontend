@@ -24,11 +24,7 @@ const Comment = (props) => {
   return (
     <div>
         <button onClick={fetchComment}>See comments</button>
-        <div>
-                      {myComment}
-                      
-                      
-                  </div>
+        <div>{myComment}</div>
     </div>
   )
 }
