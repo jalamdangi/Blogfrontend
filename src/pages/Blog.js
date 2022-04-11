@@ -1,5 +1,7 @@
 import React, { useEffect , useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import Recentblog from '../components/Recentblog';
+import Sidebar from '../components/Recentpostsidebar';
 import './pages.css';
 
 const Blog = () => {
@@ -24,16 +26,17 @@ const Blog = () => {
             return(
                   <>
                   <div className="card col-md-6">
-                    <img className="card-img-top" src={item.image} alt="Card image cap" style={{height:200,width:200}}/>
+                    <img className="card-img-top" src={item.image} alt="Card image cap" style={{height:300}}/>
                     <div className="card-body">
                     <h5 className="card-title">{item.title}</h5>
+                    <h6>Category : {item.category}</h6>
                     <p className="card-text text-truncate">{item.description}</p>
                     <p>{item.tags.map((tag)=>{return(
                       <>
-                      <NavLink to={`/fetchbytags/${tag}`} style={{margin:"10px"}}>{tag}</NavLink>
+                      <NavLink to={`/fetchbytags/${tag}`} className="blog-tags">{tag}</NavLink>
                       </>
                     )})}</p>
-                    <NavLink to={`singleblog/${item._id}`} className="btn btn-primary">Read More</NavLink>
+                    <NavLink to={`singleblog/${item._id}/${item.category}`} className="btn btn-info">Read More</NavLink>
                     </div>
                  </div>
                   </>
@@ -42,14 +45,13 @@ const Blog = () => {
             }
             </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-3 blog-recentpost-section">
               <div className="row border">
-              <h3 className='pl-3'>Recent Posts</h3>
-              <div className="col-md-12">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates vel quam repellendus commodi laborum beatae, odit ducimus eaque. Velit in id porro ducimus maiores sapiente aperiam dolorum, molestias iure consequatur veniam. Impedit iure blanditiis minima sequi eos eius explicabo harum!</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates vel quam repellendus commodi laborum beatae, odit ducimus eaque. Velit in id porro ducimus maiores sapiente aperiam dolorum, molestias iure consequatur veniam. Impedit iure blanditiis minima sequi eos eius explicabo harum!</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates vel quam repellendus commodi laborum beatae, odit ducimus eaque. Velit in id porro ducimus maiores sapiente aperiam dolorum, molestias iure consequatur veniam. Impedit iure blanditiis minima sequi eos eius explicabo harum!</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates vel quam repellendus commodi laborum beatae, odit ducimus eaque. Velit in id porro ducimus maiores sapiente aperiam dolorum, molestias iure consequatur veniam. Impedit iure blanditiis minima sequi eos eius explicabo harum!</p>
+                <h3 className='pl-3'>Recent Posts</h3>
+                <div className="row">
+                  <div className="col-md-12">
+                      <Sidebar></Sidebar>
+                  </div>
               </div>
             </div>
             </div>

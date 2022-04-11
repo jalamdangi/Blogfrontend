@@ -2,7 +2,6 @@
 .wrapper{
     background-color: whitesmoke;
     max-width: 90%;
-    /* border: 2px solid black; */
 }
 .wrapper img{
     width: 100%; height: auto;
@@ -11,4 +10,29 @@
 
 /* signup page css */
 .signup-img img{width: 100%; height: auto;}
- 
+
+  /* blog page css  */
+  /* .blog-recentpost-section{
+      position: fixed;
+      right: 0%;
+      top: 10%;
+  }
+  .navbar-dark{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+  }
+  */
+  .blog-tags{
+      text-decoration: none !important;
+      margin-right: 6px;
+      background-color: dodgerblue;
+      border-radius: 0%;
+      color: black;
+      padding: 5px;
+      /* border-radius: 20%; */
+  }
+  .blog-tags:hover{
+    color: white;
+}
