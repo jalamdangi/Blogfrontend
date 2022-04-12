@@ -10,7 +10,7 @@ import Signup from './pages/Signup';
 import Check from './pages/Check';
 import Errorpage from './pages/Errorpage';
 import Fetchbytags from './pages/Fetchbytags';
-import Addpost from './user/Addpost';
+import Userprofile from './user/Userprofile';
 import Recentblog from './components/Recentblog';
 import BlogCategory from './pages/BlogCategory';
 import Footer from './components/Footer';
@@ -38,6 +38,7 @@ function App() {
           <Route exact path='blog/singleblog/:id/:category' element={<Singleblog/>}/>
           <Route exact path='/blogcategory/:category' element={<BlogCategory/>}/>
           <Route exact path='/blogcategory/:category/singleblog/:id' element={<Singleblog/>}/>
+          <Route exact path='/Userprofile' element={!localStorage.getItem('token')?<Signin/>:<Userprofile/>}/>
           <Route exact path='/Userdashboard' element={!localStorage.getItem('token')?<Signin/>:<Userdashboard/>}/>
           <Route exact path='/Question' element={<Question />} />
           <Route path="*" element={<Errorpage />} />
