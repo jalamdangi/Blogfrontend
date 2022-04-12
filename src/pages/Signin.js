@@ -18,7 +18,7 @@ const Signin = () => {
  else{
 
    localStorage.setItem('token',res.token);
-   navigate('/Userprofile');
+   navigate('/Userdashboard');
  }
   
  }
