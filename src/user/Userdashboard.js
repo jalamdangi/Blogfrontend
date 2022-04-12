@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import './user.css';
-import UserNav from './UserNav';
 import profilepic from '../images/profilepic.jfif';
 import Addpost from './Addpost';
 import Editpost from './Editpost';
-import Userprofile from './Addpost';
 import Viewpost from './Viewpost';
 import AskQuestion from './AskQuestion';
 const Userdashboard = () => {
@@ -20,7 +18,7 @@ const Userdashboard = () => {
               <div className="col-md-12">
                 <div className="row">
                   <div className="col-md-3"><i className='fa fa-plus'></i></div>
-                  <div className="col-md-9"><button onClick={()=>setuserRole(<Userprofile></Userprofile>)} className='btn btn-success'>Add Post</button></div>
+                  <div className="col-md-9"><button onClick={()=>setuserRole(<Addpost></Addpost>)} className='btn btn-success'>Add Post</button></div>
                 </div>
                 <div className="row">
                   <div className="col-md-3"><i className='fa fa-eye'></i></div>
