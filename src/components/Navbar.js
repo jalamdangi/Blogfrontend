@@ -33,13 +33,15 @@
         <NavLink className="nav-link disabled" to="/contact">Contact</NavLink>
       </li>
       <li className="nav-item">
-        <NavLink className="nav-link disabled" to="/check">Check</NavLink>
+        <NavLink className="nav-link disabled" to="/question">Question</NavLink>
       </li>
     </ul>
+        {!localStorage.getItem('token')?'':<NavLink style={{color:"#fff",margin:"5px"}} to='/Userdashboard'>Your Dashboard</NavLink>}
     {!localStorage.getItem('token')? <form className="d-flex">
         <NavLink className="btn btn-primary mx-2" style={{backgroundColor:"teal"}} to="/login" role="button">Login</NavLink>
         <NavLink className="btn btn-primary mx-2" style={{backgroundColor:"teal"}} to="/signup" role="button">Sign up</NavLink> 
-      </form>: <button className="btn btn-primary" style={{backgroundColor:"teal"}} onClick={logOuthandle}>Logout</button>}
+      </form>:<button className="btn btn-primary" style={{backgroundColor:"teal",margin:"5px"}} onClick={logOuthandle}>Logout</button> 
+      }
   </div>
 </nav>
     </div>

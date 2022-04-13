@@ -4,6 +4,7 @@ const Editpost = () => {
   return (
     <div>
         <h2>Edit Post Here..</h2>
+        <h4 className='pt-4'>Edit Post Here..</h4>
         <form>
   <div className="form-group">
     <label for="exampleInputEmail1">Email address</label>

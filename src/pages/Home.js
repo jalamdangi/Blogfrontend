@@ -19,7 +19,7 @@ const Home = () => {
                 <div className="col-md-6 about-section">
                     <div className="row">
                         <div className="col-md-12">
-                        <h3 className='text-info'>Give Power To Your Thouts</h3>
+                        <h3 className='text-info'>Give Power To Your Thought</h3>
                         </div>
                         <div className="col-md-12">
                         <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ipsa dicta necessitatibus doloremque temporibus quas fugit tempora voluptatum excepturi molestiae.</h5>
