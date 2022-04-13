@@ -15,6 +15,7 @@ import BlogCategory from './pages/BlogCategory';
 import Footer from './components/Footer';
 import Question from './pages/Question';
 import Userdashboard from './user/Userdashboard';
+import Edit from './user/Edit';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route exact path='/blogcategory/:category/singleblog/:id' element={<Singleblog/>}/>
           <Route exact path='/Userdashboard' element={!localStorage.getItem('token')?<Signin/>:<Userdashboard/>}/>
           <Route exact path='/Question' element={<Question />} />
+          <Route exact path='/editpost/:id' element={<Edit />} />
           <Route path="*" element={<Errorpage />} />
         </Routes>
         <Footer></Footer>

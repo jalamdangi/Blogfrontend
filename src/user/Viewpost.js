@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 const Userblog = () => {
-    const[data,setData]=useState(['data']);
+    const[data,setData]=useState([]);
     const [blog,setBlog]=useState('');
     const token=localStorage.getItem('token');
 
@@ -37,7 +37,8 @@ const Userblog = () => {
                           <NavLink to={`/fetchbytags/${tag}`} className="blog-tags">{tag}</NavLink>
                           </>
                         )})}</p>
-                        <NavLink to={`singleblog/${item._id}/${item.category}`} className="btn btn-info">Read More</NavLink>
+                        <NavLink to={`/singleblog/${item._id}/${item.category}`} className="btn btn-info">Read More</NavLink>
+                        <NavLink to={`/editpost/${item._id}`} className="btn btn-info">Edit Post</NavLink>
                         </div>
                      </div>
                       </>
